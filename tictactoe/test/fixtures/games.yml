@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player_1: MyString
+  player_2: MyString
+  game_title: MyString
+  user_id: 1
+  game_complete: false
+
+two:
+  player_1: MyString
+  player_2: MyString
+  game_title: MyString
+  user_id: 1
+  game_complete: false

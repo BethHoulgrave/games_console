@@ -1,0 +1,12 @@
+show.html.erb<% title "Move" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @move.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_move_path(@move) %> |
+  <%= link_to "Destroy", @move, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", moves_path %>
+</p>

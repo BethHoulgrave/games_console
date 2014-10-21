@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: MyString
+  cell: MyString
+  move_number: 1
+  game_id: 1
+
+two:
+  user: MyString
+  cell: MyString
+  move_number: 1
+  game_id: 1
