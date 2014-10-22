@@ -21,9 +21,14 @@
 </p>
 
 <p>
+  <b>Player<%= @player_1 %>, it's your turn</b>
+</p>
+
+<p>
   <b>Game complete:</b>
   <%= @game.game_complete %>
 </p>
+
 
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
@@ -35,16 +40,17 @@
 
 
 
-div class = 'boxes'
-<% @board.each_with_index do |move, square_id| %>
-<% if move == 'X' %>
-  <%= image_tag('alien.jpg', class: 'square') %>
- <!--  *define class for css -->
-  <% elsif move == 'O'%>
-    <%= image_tag('rocket.jpeg', class: 'square') %>
-    <% else %>
-    <div class = 'square'></div>
+<div class='boxes'>
+  <% @board.each_with_index do |move, square_id| %>
+  <% if move == 'X' %>
+    <%= image_tag('alien.jpg', class: 'square') %>
+   <!--  *define class for css -->
+    <% elsif move == 'O'%>
+      <%= image_tag('rocket.jpeg', class: 'square') %>
+      <% else %>
+      <div class ='square'></div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
 
