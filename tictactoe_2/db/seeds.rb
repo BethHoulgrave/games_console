@@ -12,8 +12,8 @@ Game.delete_all
 Move.delete_all
 
 
-u1 = User.create!(email: 'dorothy@tictac.com', password_digest: 'password1', games_lost: 3, games_won: 5)
-u2 = User.create!(email: 'sam@tictac.com', password_digest: 'password2', games_lost: 3, games_won: 5)
+u1 = User.create!(email: 'dorothy@tictac.com', password: 'password1', games_lost: 3, games_won: 5)
+u2 = User.create!(email: 'sam@tictac.com', password: 'password2', games_lost: 3, games_won: 5)
 
 g1 = Game.create!(game_complete: true, game_title: 'dotVssam', player_1: u1.id, player_2: u2.id)
 

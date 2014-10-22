@@ -8,6 +8,22 @@
 </head>
 <body>
 
+  <% flash.each do |name, msg| %>
+    <div class="flash-message flash-message-<%= name %>">
+      <%= msg %>
+    </div>
+  <% end %>
+
+    <% if current_user %>
+    <p>hello <%= current_user.email %></p>
+  <% end %>
+
+  <nav>
+    <%=link_to 'users', users_path %> |
+    <%=link_to 'games', games_path %> |
+    <%=link_to 'moves', moves_path %> |
+</nav>
+
 <%= yield %>
 
 </body>
