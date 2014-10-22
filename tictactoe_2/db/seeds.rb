@@ -18,7 +18,7 @@ u2 = User.create!(email: 'sam@tictac.com', password_digest: 'password2', games_l
 g1 = Game.create!(game_complete: true, game_title: 'dotVssam', player_1: u1.id, player_2: u2.id)
 
 
-g1.moves.create!(user_id: u1.id, symbol: '0', cell: '0')
+g1.moves.create!(user_id: u1.id, symbol: 'O', cell: '0')
 
 puts g1.build_board.inspect
 
@@ -26,7 +26,7 @@ g1.moves.create!(user_id: u2.id, symbol: 'X', cell: '4')
 
 puts g1.build_board.inspect
 
-g1.moves.create!(user_id: u1.id, symbol: '0', cell: '1')
+g1.moves.create!(user_id: u1.id, symbol: 'O', cell: '1')
 
 puts g1.build_board.inspect
 
@@ -34,7 +34,7 @@ g1.moves.create!(user_id: u2.id, symbol: 'X', cell: '5')
 
 puts g1.build_board.inspect
 
-g1.moves.create!(user_id: u1.id, symbol: '0', cell: '2')
+g1.moves.create!(user_id: u1.id, symbol: 'O', cell: '2')
 
 puts g1.build_board.inspect
 

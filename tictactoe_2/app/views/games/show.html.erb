@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <b>User:</b>
-  <%= @game.user_id %>
-</p>
+  <%#= @game.user_id %>
+</p> -->
 
 <p>
   <b>Game title:</b>
@@ -28,3 +28,23 @@
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
+<br>
+<br>
+
+
+
+
+
+div class = 'boxes'
+<% @board.each_with_index do |move, square_id| %>
+<% if move == 'X' %>
+  <%= image_tag('alien.jpg', class: 'square') %>
+ <!--  *define class for css -->
+  <% elsif move == 'O'%>
+    <%= image_tag('rocket.jpeg', class: 'square') %>
+    <% else %>
+    <div class = 'square'></div>
+  <% end %>
+<% end %>
+
+

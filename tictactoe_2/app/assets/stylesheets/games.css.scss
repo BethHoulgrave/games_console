@@ -2,8 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.boxes {
+  width: 400px;
+  height: 400px;
+  border: #000000 solid 1px;
+}
 
-table {
+.square {
+  display: inline-block;
+  margin: 5px;
+  width: 175px;
+  height: 175px; 
+  border: #000000 solid 1px;
+  float: left;
+  text-align: center;
+}
+
+.square:hover {
+  background-color: yellow;
+}
+
+
+
+/*table {
     border: 1px solid black;
     color: white;
     background-color: black;
@@ -13,8 +34,12 @@ td {
     height: 150px;
     width: 150px;
     text-align: center;
+    bgcolor: white;
+    onmouseover: #d3d3d3;
+    onmouseout: 'white';
 }
 
 th {
     text-align: center;
-}
+}*/
+
