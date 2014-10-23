@@ -23,13 +23,18 @@ class MovesController < ApplicationController
 
   # GET /moves/new
   # GET /moves/new.json
+  # ASSIGNING X AND O TO PLAYERS
   def new
-    @move = Move.new
-    binding.pry
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @move }
+    @game = Game.find(params[:game_id])
+    if current_user.id == @game.player_1
+      player_symbol = 'X'
+    else
+      player_symbol = 'O'
     end
+    # ADDING THE MOVE AND IT'S VARIABLES TO THE DATABASE 
+    @game.moves.create(cell: params[:square_id], user_id: current_user.id, symbol: player_symbol)
+    # REDIRECTS TO THE SHOW PAGE
+    redirect_to game_path(@game)
   end
 
   # GET /moves/1/edit
@@ -37,20 +42,7 @@ class MovesController < ApplicationController
     @move = Move.find(params[:id])
   end
 
-  # POST /moves
-  # POST /moves.json
   def create
-    @move = Move.new(params[:move])
-
-    respond_to do |format|
-      if @move.save
-        format.html { redirect_to @move, notice: 'Move was successfully created.' }
-        format.json { render json: @move, status: :created, location: @move }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @move.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PUT /moves/1
