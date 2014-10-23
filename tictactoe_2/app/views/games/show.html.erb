@@ -48,7 +48,7 @@
     <% elsif move == 'O'%>
       <%= image_tag('rocket.jpeg', class: 'square') %>
       <% else %>
-      <div class ='square'></div>
+          <%= link_to " ", new_game_move_path(@game, square_id: square_id),  class: 'square'%>
     <% end %>
   <% end %>
 </div>

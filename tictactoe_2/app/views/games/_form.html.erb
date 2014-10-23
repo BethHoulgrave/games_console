@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :player_2 %><br />
-    <%= f.collection_select(:user_id, User.all, :id, :email) %>
+    <%= f.collection_select(:player_2, User.all, :id, :email) %>
   </div>
   <div class="field">
     <%= f.label :game_complete %><br />

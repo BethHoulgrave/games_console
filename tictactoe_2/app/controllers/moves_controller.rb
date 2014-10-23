@@ -25,7 +25,7 @@ class MovesController < ApplicationController
   # GET /moves/new.json
   def new
     @move = Move.new
-
+    binding.pry
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @move }

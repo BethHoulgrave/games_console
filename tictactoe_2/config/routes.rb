@@ -1,10 +1,12 @@
 Tictactoe2::Application.routes.draw do
   resources :sessions
 get "/logout", to: "sessions#destroy"
-  resources :moves
+  
 
 
-  resources :games
+  resources :games do 
+    resources :moves 
+  end
 
 
   resources :users
