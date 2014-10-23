@@ -37,7 +37,6 @@ p {
     font-size: 20px;
 }
 
-
 nav {
     color: #FF7F50;
     text-align: center;
@@ -50,7 +49,6 @@ nav {
     text-align: center;
     font-family: "Helvetica";
     font-size: 20px;
-
 }
 
 td {
@@ -73,15 +71,27 @@ a:link {
 
 a:hover {
   color: #FF6347;
-  background-color: #FF704D;
+  background-color: white;
 }
 
-#button1 {
+#Button {
 /*   background-image: url('x_button.png');*/
    height: 70px;
    width: 70px;
 }
 
-#Library:hover {
-   background-image: url('o_button.png');
+#Button:hover(element) {
+   background-image: url('ouser_button_white.png');
+}
+
+VERTICAL NAV
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul a {
+    display: block;
+    width: 60px;
 }

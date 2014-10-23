@@ -7,38 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
 
-  <% flash.each do |name, msg| %>
-    <div class="flash-message flash-message-<%= name %>">
-      <%= msg %>
-    </div>
-  <% end %>
+      <% flash.each do |name, msg| %>
+        <div class="flash-message flash-message-<%= name %>">
+          <%= msg %>
+        </div>
+      <% end %>
 
-    <% if current_user %>
-    <p>hello <%= current_user.email %></p>
-    <%= link_to "log out", logout_path %>
-    <%else%>
-    <%= link_to "log in", new_session_path %>
-    <%= link_to "sign up", new_user_path %>
-  <% end %>
+        <% if current_user %>
+        <p>hello <%= current_user.email %></p>
+        <%= link_to "log out", logout_path %>
+        <%else%>
+        <%= link_to "log in", new_session_path %>
+        <%= link_to "sign up", new_user_path %>
+      <% end %>
 
-<% if current_user && current_user.role == "admin" %>
-    You're the boss ! you have access to all the secrets
-  <% elsif current_user && current_user.role == "user" %>
-    You can't access everything because you're a simple user 
-  <% end %>
+    <% if current_user && current_user.role == "admin" %>
+        You're the boss ! you have access to all the secrets
+      <% elsif current_user && current_user.role == "user" %>
+        You can't access everything because you're a simple user 
+      <% end %>
 
-  <nav>
-    <div id="button1"></div>
-    <%=link_to image_tag('Ouser_button.png'), users_path %>
-    </div>
-<!--     <input type="image" src="derp.png" onMouseOver="this.src='aderp.png'" onMouseOut="this.src='derp.png'"> -->
-  <div id="button2"></div>
-    <%=link_to image_tag('xgame_button.png'), games_path %></div>
-    <%#=link_to 'moves', moves_path %>
-</nav>
+      <nav>
+        <div id="Button"></div>
+        <%=link_to image_tag('ouser_button_allblack.png'), users_path %>
+        </div>
+        <br>
+        <br>
+    <!--     <input type="image" src="derp.png" onMouseOver="this.src='aderp.png'" onMouseOut="this.src='derp.png'"> -->
+      <div id="Button2"></div>
+        <%=link_to image_tag('xgame_button_allblack.png'), games_path %></div>
+        <%#=link_to 'moves', moves_path %>
+    </nav>
 
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>

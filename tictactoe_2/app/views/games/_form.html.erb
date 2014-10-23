@@ -22,10 +22,7 @@
     <%= f.label :player_2 %><br />
     <%= f.collection_select(:player_2, User.all, :id, :email) %>
   </div>
-  <div class="field">
-    <%= f.label :game_complete %><br />
-    <%= f.text_field :game_complete %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
