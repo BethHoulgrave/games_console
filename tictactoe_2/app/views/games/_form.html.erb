@@ -19,12 +19,8 @@
     <%= f.text_field :game_title %>
   </div>
   <div class="field">
-    <%= f.label :player_1 %><br />
-    <%= f.text_field :player_1 %>
-  </div>
-  <div class="field">
     <%= f.label :player_2 %><br />
-    <%= f.text_field :player_2 %>
+    <%= f.collection_select(:user_id, User.all, :id, :email) %>
   </div>
   <div class="field">
     <%= f.label :game_complete %><br />
