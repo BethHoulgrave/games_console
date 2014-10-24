@@ -1,6 +1,6 @@
-// Place all the styles related to the Games controller here.
+/*// Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 .boxes {
   margin: 0 auto;
@@ -14,10 +14,12 @@
   border: #000000 solid 1px;
   float: left;
   text-align: center;
+  border-style: dotted;
 }
 
 .square:hover {
-  background-color: yellow;
+  background-color: #B2B3B7;
+  opacity: 0.4;
 }
 
 
@@ -39,5 +41,6 @@ td {
 
 th {
     text-align: center;
-}*/
+}
 
+*/

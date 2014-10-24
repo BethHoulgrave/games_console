@@ -45,10 +45,10 @@
 <div class='boxes'>
   <% @board.each_with_index do |move, square_id| %>
   <% if move == 'X' %>
-    <%= image_tag('alien.jpg', class: 'square') %>
+    <%= image_tag('O_symbol_black.png', class: 'square') %>
    <!--  *define class for css -->
     <% elsif move == 'O'%>
-      <%= image_tag('rocket.jpeg', class: 'square') %>
+      <%= image_tag('X_symbol.png', class: 'square') %>
       <% else %>
           <%= link_to " ", new_game_move_path(@game, square_id: square_id),  class: 'square'%>
     <% end %>

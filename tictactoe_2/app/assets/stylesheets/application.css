@@ -73,6 +73,12 @@ nav {
   color: white;
 }
 
+.boxes {
+  margin: 0 auto;
+}
+
+
+
 a {
     text-decoration: none;
     color: white;
