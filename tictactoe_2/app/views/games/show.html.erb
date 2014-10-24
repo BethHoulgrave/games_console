@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
 <h1>PLAY!</h1>
+
+<p id="notice"><%= notice %></p>
+
 <!-- <p>
   <b>User:</b>
   <%#= @game.user_id %>
@@ -28,12 +30,12 @@
   <b>Game complete:</b>
   <%= @game.game_complete %>
 </p>
-
-
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
 <br>
+
+<div class="back">
+  <%= link_to 'Edit', edit_game_path(@game) %> |
+  <%= link_to 'Back', games_path %>
+</div>
 <br>
 
 

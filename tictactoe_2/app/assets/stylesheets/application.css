@@ -20,6 +20,8 @@ body {
     font-family: "Helvetica"; 
     text-transform: uppercase;
     margin: 0 auto;
+    color: white;
+
 
 }
 
@@ -68,9 +70,8 @@ nav {
 
 .back {
   text-align: center;
+  color: white;
 }
-
-
 
 a {
     text-decoration: none;
@@ -112,14 +113,15 @@ ul a {
 
 li {
     display: inline;
-    float: left;
+    float: center;
 }
 
 li a {
-    display: block;
-    width: 15px;
+    display: inline;
+    width: 70px;
     color: white;
     float: left;
+    text-decoration: none;
 }
 
 table {
