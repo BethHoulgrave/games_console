@@ -21,11 +21,7 @@ body {
     text-transform: uppercase;
     margin: 0 auto;
     color: white;
-
-
 }
-
-
 
 h1 {
     color: white ;
@@ -33,6 +29,12 @@ h1 {
     font-family: "Helvetica";
     font-size: 20px;
     text-shadow: 1px 2px #C0C0C0;
+}
+
+h2 {
+  color: #C0C0C0;
+  font-size: 50px;
+  text-shadow: 1px 2px #EC5F4B;
 }
 
 p {
