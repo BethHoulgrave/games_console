@@ -1,0 +1,107 @@
+
+%br/
+%h1 PLAY!
+%p#notice= notice
+/
+  <p>
+  <b>User:</b>
+  <haml_silent>
+  </haml_silent></p>
+%p
+  %b Game title:
+  = @game.game_title
+%p
+  %b Player 1:
+  = @game.player_1
+%p
+  %b Player 2:
+  = @game.player_2
+/
+  <p>
+  <b>Player<haml_loud> @player_1 </haml_loud>, it's your turn</b>
+  </p>
+/
+  <p>
+  <b>Game complete:</b>
+  <haml_loud> @game.game_complete </haml_loud>
+  </p>
+/ DISPLAY WINNER
+%h2
+  - if @game.check_win?
+    = "WINNER!"
+.boxes
+  - @board.each_with_index do |move, square_id|
+    - if move == 'X'
+      = image_tag('X_symbol.png', class: 'square')
+      / *define class for css
+    - elsif move == 'O'
+      = image_tag('O_symbol_black.png', class: 'square')
+    - else
+      = link_to " ", new_game_move_path(@game, square_id: square_id),  class: 'square'
+.back
+  = link_to 'Edit', edit_game_path(@game)
+  |
+  \#{link_to 'Back', games_path}
+
+
+/ *******************************************
+
+/ <br>
+
+/ <h1>PLAY!</h1>
+
+/ <p id="notice"><%= notice %></p>
+
+/ <!-- <p>
+/   <b>User:</b>
+/   <%#= @game.user_id %>
+/ </p> -->
+
+/ <p>
+/   <b>Game title:</b>
+/   <%= @game.game_title %>
+/ </p>
+
+/ <p>
+/   <b>Player 1:</b>
+/   <%= @game.player_1 %>
+/ </p>
+
+/ <p>
+/   <b>Player 2:</b>
+/   <%= @game.player_2 %>
+/ </p>
+
+/ <!-- <p>
+/   <b>Player<%= @player_1 %>, it's your turn</b>
+/ </p> -->
+
+/ <!-- <p>
+/   <b>Game complete:</b>
+/   <%= @game.game_complete %>
+/ </p> -->
+
+
+/ <!-- DISPLAY WINNER -->
+/ <h2><%if @game.check_win?%>
+/   <%="WINNER!"%></td>
+/ <%end%></h2>
+
+/ <div class='boxes'>
+/   <% @board.each_with_index do |move, square_id| %>
+/   <% if move == 'X' %>
+/     <%= image_tag('X_symbol.png', class: 'square') %>
+/    <!--  *define class for css -->
+/     <% elsif move == 'O'%>
+/       <%= image_tag('O_symbol_black.png', class: 'square') %>
+/       <% else %>
+/           <%= link_to " ", new_game_move_path(@game, square_id: square_id),  class: 'square'%>
+/     <% end %>
+/   <% end %>
+/ </div>
+
+/ <div class="back">
+/   <%= link_to 'Edit', edit_game_path(@game) %> |
+/   <%= link_to 'Back', games_path %>
+/ </div>
+

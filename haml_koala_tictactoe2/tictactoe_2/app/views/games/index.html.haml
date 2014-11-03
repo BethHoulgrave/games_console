@@ -1,0 +1,58 @@
+%h1 GAME HISTORY
+%table
+  %tr
+    %th User
+    %th Game title
+    %th Player 1
+    %th Player 2
+    %th Game complete
+    %th
+    %th
+    %th
+  - @games.each do |game|
+    %tr
+      %td= game.game_title
+      %td= game.player_1
+      %td= game.player_2
+      %td= game.game_complete
+      %td= link_to 'Show', game
+      %td= link_to 'Edit', edit_game_path(game)
+      %td= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Game', new_game_path
+
+
+/ ******************************************
+
+
+/ <h1>GAME HISTORY</h1>
+
+/ <table>
+/   <tr>
+/     <th>User</th>
+/     <th>Game title</th>
+/     <th>Player 1</th>
+/     <th>Player 2</th>
+/     <th>Game complete</th>
+/     <th></th>
+/     <th></th>
+/     <th></th>
+/   </tr>
+
+/ <% @games.each do |game| %>
+/   <tr>
+/     <td><%= game.game_title %></td>
+/     <td><%= game.player_1 %></td>
+/     <td><%= game.player_2 %></td>
+/     <td><%= game.game_complete %></td>
+/     <td><%= link_to 'Show', game %></td>
+/     <td><%= link_to 'Edit', edit_game_path(game) %></td>
+/     <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+/   </tr>
+/ <% end %>
+/ </table>
+/ <br />
+
+
+
+/ <%= link_to 'New Game', new_game_path %>

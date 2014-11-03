@@ -1,0 +1,28 @@
+%h1 Log in
+= form_tag sessions_path do
+  .field
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+  .field
+    = label_tag :password
+    = password_field_tag :password
+  %br/
+  .actions
+    %li= submit_tag "Log in"
+    
+/ ***********************
+/ <h1>Log in</h1>
+/   <%= form_tag sessions_path do %>
+/     <div class="field">
+/       <%= label_tag :email %>
+/       <%= text_field_tag :email, params[:email] %>
+/     </div>
+/     <div class="field">
+/       <%= label_tag :password %>
+/       <%= password_field_tag :password %>
+/     </div>
+/     <br>
+/     <div class="actions">
+/       <li><%= submit_tag "Log in" %>
+/     </div></li>
+/   <% end %>

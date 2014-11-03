@@ -1,0 +1,52 @@
+%h1 SCOREBOARD
+%table
+  %tr
+    %th Email
+    %th Password
+    %th Games won
+    %th Games lost
+    %th
+    %th
+    %th
+  - @users.each do |user|
+    %tr
+      %td= user.email
+      %td= user.password
+      %td= user.games_won
+      %td= user.games_lost
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New User', new_user_path
+
+/ *****************************
+/ <h1>SCOREBOARD</h1>
+
+/ <table>
+/   <tr>
+/     <th>Email</th>
+/     <th>Password</th>
+/     <th>Games won</th>
+/     <th>Games lost</th>
+/     <th></th>
+/     <th></th>
+/     <th></th>
+/   </tr>
+
+/ <% @users.each do |user| %>
+/   <tr>
+/     <td><%= user.email %></td>
+/     <td><%= user.password %></td>
+/     <td><%= user.games_won %></td>
+/     <td><%= user.games_lost %></td>
+/     <td><%= link_to 'Show', user %></td>
+/     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+/     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+/   </tr>
+/ <% end %>
+/ </table>
+
+/ <br />
+
+/ <%= link_to 'New User', new_user_path %>
