@@ -1,0 +1,216 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+ @import "bourbon";
+ @import "variables.css.scss";
+ @import "mixins.css.scss";
+ @import "scss_practice.css.scss";
+ @import "style.css.scss";
+
+
+
+
+ /*SESSIONS.CSS.SCSS*/
+
+  a{
+  color: white;
+  text-decoration: none;
+}
+
+.actions {
+    color: black;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 20px;
+}
+
+/********************/
+
+
+/*GAMES.CSS.SCSS*/
+
+.boxes {
+  margin: 0 auto;
+  height: 500px;
+  width: 600px;
+}
+
+.square {
+  display: inline-block;
+  margin: 5px;
+  width: 175px;
+  height: 175px; 
+  border: #000000 solid 1px;
+  float: left;
+  text-align: center;
+  border-style: dotted;
+}
+
+.square:hover {
+  background-color: #B2B3B7;
+  opacity: 0.4;
+}
+
+/**********************/
+
+
+/*APPLICATION.CSS*/
+
+body {
+    background-image: url('tictactoe_background.jpg');
+    text-align: center;
+    font-family: "Helvetica"; 
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: white;
+}
+
+h1 {
+    color: white ;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 20px;
+    text-shadow: 1px 2px #C0C0C0;
+}
+
+h2 {
+  color: #C0C0C0;
+  font-size: 50px;
+  text-shadow: 1px 2px #EC5F4B;
+}
+
+p {
+    color: white;
+    text-align: left;
+    font-family: "Helvetica";
+    font-size: 15px;
+    margin: 0 auto;
+    border: 1px #EC5F4B;
+    border-style: dotted;
+    width: 300px;
+}
+
+nav {
+    color: white;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 15px;
+}
+
+.field {
+    color: white;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 15px;
+    padding: 10px;
+}
+
+.actions {
+    color: white;
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 15px;
+}
+
+.back {
+  text-align: center;
+  color: white;
+}
+
+.boxes {
+  margin: 0 auto;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 15px;
+}
+
+
+a:hover {
+  color: #EC5F4B;
+  background-color: transparent;
+}
+
+#Button {
+/*   background-image: url('x_button.png');*/
+   height: 70px;
+   width: 70px;
+}
+
+#Button:hover(element) {
+   background-image: url('ouser_button_white.png');
+}
+
+VERTICAL NAV
+ul {
+    list-style-type: none;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul a {
+    display: block;
+    width: 100%;
+}
+
+
+li {
+    display: inline;
+    float: center;
+}
+
+li a {
+    display: inline;
+    width: 70px;
+    color: white;
+    float: left;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    margin: 0 auto;
+    border: 1px #EC5F4B;
+    border-style: dotted;
+}
+
+th {
+  color: white;
+}
+
+td {
+  color: white;
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 15px;
+}
+
+td a {
+  color: white;
+  font-size: 15px;
+}
+
+td a:hover {
+    color: #EC5F4B;
+    background-color: transparent;
+}
